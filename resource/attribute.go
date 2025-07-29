@@ -258,6 +258,9 @@ type Int64Attribute struct {
 	// be considered sensitive data.
 	Sensitive *bool `json:"sensitive,omitempty"`
 
+	// WriteOnly indicates whether the attribute should be considered write-only
+	WriteOnly *bool `json:"write_only,omitempty"`
+
 	// Validators define types and functions that provide validation
 	// functionality for the block.
 	Validators schema.Int64Validators `json:"validators,omitempty"`

@@ -3280,6 +3280,13 @@ func TestSpecification_JSONUnmarshal_Version0_1(t *testing.T) {
 										ComputedOptionalRequired: schema.Computed,
 									},
 								},
+								{
+									Name: "int64_attribute_write_only",
+									Int64: &resource.Int64Attribute{
+										ComputedOptionalRequired: schema.Optional,
+										WriteOnly:                pointer(true),
+									},
+								},
 							},
 							Blocks: []resource.Block{
 								{
@@ -9114,6 +9121,13 @@ func TestSpecification_Generate_Version0_1(t *testing.T) {
 											Type: "*apisdk.Type",
 										},
 										ComputedOptionalRequired: schema.Computed,
+									},
+								},
+								{
+									Name: "int64_attribute_write_only",
+									Int64: &resource.Int64Attribute{
+										ComputedOptionalRequired: schema.Optional,
+										WriteOnly:                pointer(true),
 									},
 								},
 							},
