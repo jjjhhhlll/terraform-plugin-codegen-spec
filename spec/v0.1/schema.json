@@ -2471,6 +2471,9 @@
             "sensitive": {
               "type": "boolean"
             },
+            "write_only": {
+              "type": "boolean"
+            },
             "validators": {
               "$ref": "#/$defs/schema_int64_validators"
             }
